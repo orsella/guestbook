@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0d252e;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1rem;
+}
+
+#guestbook-form {
+  background-color: #283c50;
+  /* border: 2px solid #38598b; */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  /* box-shadow: 0px 10px 15px #e3dfeb; */
+  margin-bottom: 2rem;
+}
+
+h1 {
+  color: #d33a2c;
+  font-size: 30px;
+  padding-bottom: 1rem;
+}
+
+label {
+  padding: 1rem 0rem 0.5rem;
+  color: #d33a2c;
+}
+
+input {
+  width: 60vw;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.5rem 0rem;
+  border-radius: 5px;
+  margin: 1rem 0rem 0.5rem;
+  width: 30vw;
+  border: none;
+}
+
+button:hover {
+  background-color: #d33a2c;
+  color: white;
+}
+
+#message-list {
+}
+
+.message-div {
+  background-color: #283c50;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  padding-bottom: 0;
+  border-radius: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.message-div > div {
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #e5e5e5;
+}
+
+@media (min-width: 768px) {
+  .message-div {
+    justify-content: space-around;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  span {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  label {
+    font-size: 25px;
+  }
+  .message-div {
+    flex-direction: column;
+    padding-bottom: 0;
+    /* padding: 0.5rem; */
+  }
+
+  .message-div > div {
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 20vw;
+  }
+}

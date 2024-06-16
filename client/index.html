@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guestbook</title>
+  </head>
+  <body>
+    <form id="guestbook-form" aria-label="guestbook-form">
+      <h1>Guestbook</h1>
+      <label for="username">Username</label>
+      <input
+        type="text"
+        name="username"
+        placeholder="Your username"
+        id="username"
+        required
+      />
+      <label for="message">Your Message</label>
+      <input
+        type="text"
+        name="message"
+        placeholder="Write your message"
+        id="message"
+        required
+      />
+      <button type="submit">Send</button>
+    </form>
+    <div id="message-list"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
