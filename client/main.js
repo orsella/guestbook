@@ -1,7 +1,7 @@
 const form = document.getElementById("guestbook-form");
 
 async function fetchAndRenderMessages() {
-  const response = await fetch("http://localhost:8000/message");
+  const response = await fetch("https://guestbook-c6ic.onrender.com/message");
   const messageList = await response.json();
   // console.log(messageList);
   const messageListDiv = document.getElementById("message-list");
@@ -31,13 +31,16 @@ async function handleSubmit(event) {
 
   // try allows you to define a block of code to be tested for errors while it is being executed
   try {
-    const response = await fetch("http://localhost:8000/message", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(formValues),
-    });
+    const response = await fetch(
+      "https://guestbook-c6ic.onrender.com/message",
+      {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(formValues),
+      }
+    );
 
     const data = await response.json();
 
